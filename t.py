@@ -1,10 +1,13 @@
-import time
+import concurrent.futures
 
-b = 'a' * 1024 * 1024 * 1024
-c = 42.
-n = 0
-while True:
-    c /= 4
-    #time.sleep(200)
-    print(n)
-    n += 1
+def compute(n):
+    while True:
+        x = 42/3.
+
+def main():
+    with concurrent.futures.ProcessPoolExecutor(10) as executor:
+        for number, prime in zip(range(20), executor.map(compute, range(20)):
+            print('%d is prime: %s' % (number, prime))
+
+if __name__ == '__main__':
+    main()
