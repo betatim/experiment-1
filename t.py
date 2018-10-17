@@ -6,7 +6,7 @@ def compute(n):
 
 def main():
     with concurrent.futures.ProcessPoolExecutor(10) as executor:
-        for number, prime in zip(range(20), executor.map(compute, range(20)):
+        for number, prime in zip(range(20), executor.map(compute, range(20))):
             print('%d is prime: %s' % (number, prime))
 
 if __name__ == '__main__':
