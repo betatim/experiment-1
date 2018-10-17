@@ -9,7 +9,7 @@ def compute(n):
 
 def main():
     print('cores', multiprocessing.cpu_count())
-    with concurrent.futures.ProcessPoolExecutor(20) as executor:
+    with concurrent.futures.ProcessPoolExecutor(2) as executor:
         for prime in zip(range(40), executor.map(compute, range(40))):
             print('%d is prime: %s' % (prime, prime))
 
