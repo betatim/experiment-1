@@ -3,7 +3,7 @@ import concurrent.futures
 import multiprocessing
 
 def compute(n):
-    a = 'b' * 1 * (1024 * 1024 * 1024)
+    #a = 'b' * 1 * (1024 * 1024 * 1024)
     while True:
         x = 42/3.
 
